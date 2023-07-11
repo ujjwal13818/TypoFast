@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typofast</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/{{style}}" />
+  </head>
+  <body>
+    <div class="mode" id="mode" onclick="toggle()">
+      <i class="fa-solid fa-circle-half-stroke"></i>
+      <p class="switch" id="switch" onclick="toggle()">switch mode</p>
+    </div>
+    <div class="containers">
+      <div class="left_container">
+        <div class="name">
+        <h1>About &nbsp;<span id="typofast">Typo<span 
+            class="f">F</span>ast</span><span class="icon">&nbsp;&nbsp;
+            <i class="fa-regular fa-keyboard"></i></span></span></h1>
+      </div >
+      <div class="content">
+
+     
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam provident molestias vitae atque aperiam aliquam adipisci, asperiores culpa nulla odio porro amet hic minima officiis repudiandae? Harum amet optio, sapiente repudiandae reiciendis, deleniti corrupti illo dolore atque perspiciatis quis voluptate. Non neque amet provident quod.
+
+    </div>
+    </div>
+      <div id="right_container">
+        <div class="rightL">
+           <div class="right">
+            <a href="http://localhost:3001">Beginner's Level</a>
+           </div>
+           <div class="rightd">
+            Extreme Level
+           </div>
+        </div>
+
+        <div class="rightR">
+            <div class="right">
+                Intermediate Level
+            </div>
+            <div class="rightd" style="color: rgb(212, 42, 70);">
+                <a href="http://localhost:3004">Special for coders.</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script>
+    function toggle() {
+    const font = document.getElementById("right_container");
+    const mode = document.getElementById("mode");
+    const sw = document.getElementById("switch");
+    const typofast = document.getElementById("typofast");
+  if (document.body.style.backgroundColor === "white") {
+    document.body.style.backgroundColor = "Black";
+    document.body.style.color = "white";
+    mode.style.color = "white";
+    sw.style.color = "white";
+    font.style.color = "Yellow";
+  } else {
+    document.body.style.backgroundColor = "white";
+    
+    document.body.style.color = "Black";
+    mode.style.color = "black";
+    sw.style.color = "black";
+    font.style.color = "green";
+  }
+}
+    </script>
+  </body>
+</html>

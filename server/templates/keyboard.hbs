@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typofast</title>
+    <link rel="stylesheet" href="css/{{style}}" />
+    
+  </head>
+  <body>
+    
+    <div class="contain cont1 active">
+      <div class="maindiv1 active">
+        <h2 class="goBack"><a href="/">Go Back</a></h2>
+        <div class="child1">Welcome To Typing Zone</div>
+        <div class="profile"></div>
+        <div class="child2">
+          <h3><div class="msg"></div></h3>
+        </div>
+        <div class="child3">
+          <textarea
+            name=""
+            class="typedWords"
+            cols="160"
+            rows="8"
+            placeholder="press enter to submit"
+          ></textarea>
+        </div>
+        <div class="child4"><button class="btn">Start</button></div>
+      </div>
+    </div>
+    <div class="contain cont2 ">
+      <div class="maindiv1 active">
+        <div class="child1">Welcome To Typing Zone</div>
+        <div class="profile"></div>
+        <div class="child2">
+          <h3><div class="msg"></div></h3>
+        </div>
+        <div class="child3">
+          <textarea
+            name=""
+            class="typedWords"
+            cols="160"
+            rows="8"
+            placeholder="press enter to submit"
+          ></textarea>
+        </div>
+        <div class="child4"><button class="btn">Start</button></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row1">
+        <button class="symbol Key">~</button>
+        <button class = "key">1</button>
+        <button class = "key">2</button>
+        <button class = "key">3</button>
+        <button class = "key">4</button>
+        <button class = "key">5</button>
+        <button class = "key">6</button>
+        <button class = "key">7</button>
+        <button class = "key">8</button>
+        <button class = "key">9</button>
+        <button class = "key">0</button>
+        <button class = "Key">-</button>
+        <button class = "Key">=</button>
+        <button class="back Key">Backspace</button>
+      </div>
+      <div class="row2">
+        <button class="tab Key">Tab</button>
+        <button class = "key">q</button>
+        <button class = "key">w</button>
+        <button class = "key">e</button>
+        <button class = "key">r</button>
+        <button class = "key">t</button>
+        <button class = "key">y</button>
+        <button class = "key">u</button>
+        <button class = "key">i</button>
+        <button class = "key">o</button>
+        <button class = "key">p</button>
+        <button class = "Key">[</button>
+        <button class = "Key">]</button>
+        <button class = "Key">\</button>
+      </div>
+      <div class="row3">
+        <button class="caps Key">Capslock</button>
+        <button class = "key">a</button>
+        <button class = "key">s</button>
+        <button class = "key">d</button>
+        <button class = "key">f</button>
+        <button class = "key">g</button>
+        <button class = "key">h</button>
+        <button class = "key">j</button>
+        <button class = "key">k</button>
+        <button class = "key">l</button>
+        <button class = "Key">;</button>
+        <button class = "Key">'</button>
+        <button class="ent Key">Enter</button>
+      </div>
+      <div class="row4">
+        <button class="shift Key">Shift</button>
+        <button class = "key">z</button>
+        <button class = "key">x</button>
+        <button class = "key">c</button>
+        <button class = "key">v</button>
+        <button class = "key">b</button>
+        <button class = "key">n</button>
+        <button class = "key">m</button>
+        <button class = "Key">,</button>
+        <button class = "Key">.</button>
+        <button class = "Key">/</button>
+        <button class="shift2 Key">Shift</button>
+      </div>
+      <div class="row4">
+        <button class="same Key">Ctrl</button>
+        <button class="same Key">fn</button>
+        <button class="same Key">win</button>
+        <button class="same Key">Alt</button>
+        <button class="space Key">space</button>
+        <button class="alt2 Key">Alt</button>
+        <button class="ctrl2 Key">Ctrl</button>
+      </div>
+    </div>
+  <script src="css/{{script}}"></script>
+
+  {{!-- <script>
+    
+    
+    //const path = require("path");
+   // require("../src/index.js");
+    
+    let setofwords = [
+  "Always believe in yourself",
+  "Making parents proud is one of the most satisfactory task a person can do",
+  "We should never take anyone's love for granted",
+  "Relying completely on medicine may cause more harm than disease",
+  "To succeed in life , discipline is very important.",
+];
+const msg = document.querySelectorAll(".msg");
+const typedWords = document.querySelectorAll(".typedWords");
+const btn = document.querySelectorAll(".btn");
+let start, end;
+const text = document.getElementsByTagName("textarea");
+const keys = document.querySelectorAll(".key");
+const active = document.querySelectorAll(".contain");
+const profile = document.querySelector(".profile");
+
+
+const playGames = () => {
+  const random = Math.floor(Math.random() * setofwords.length);
+  for (let i = 0; i < 2; i++) {
+    msg[i].innerText = setofwords[random];
+  }
+  let date = new Date();
+  start = date.getTime();
+};
+const wordcounter = (str) => {
+  let response = str.split(" ").length;
+  return response;
+};
+const comparewords = (str1, str2) => {
+  let words1 = str1.split(" ");
+  let words2 = str2.split(" ");
+  let count = 0;
+  words1.forEach((item, index) => {
+    if (item == words2[index]) {
+      count++;
+    }
+  });
+  let errorwords = words1.length - count - 1;
+  return (
+    " you have typed " +
+    errorwords +
+    " words incorrectly out of " +
+    words1.length +
+    "."
+  );
+};
+const endPlay = () => {
+  for (let i = 0; i < 2; i++) {
+    typedWords[i].disabled = true;
+  }
+  let date = new Date();
+  end = date.getTime();
+  let totalTime = (end - start) / 1000;
+  btn.innerText = "Start";
+  for (let i = 0; i < 2; i++) {
+    let totalstr = typedWords[i].value;
+    let wordcount = wordcounter(typedWords[i].value);
+    let speed = Math.round((wordcount / totalTime) * 60);
+    console.log(speed);
+    let finalmsg = "you have typed " + speed + " words per minute";
+    finalmsg += comparewords(msg[i].innerText, totalstr);
+
+    msg[i].innerText = finalmsg;
+  }
+};
+for (let i = 0; i < 2; i++) {
+  btn[i].addEventListener("click", function () {
+    if (this.innerText == "Start") {
+      console.log(this);
+      for (let i = 0; i < 2; i++) {
+        typedWords[i].disabled = false;
+        typedWords[i].value = "";
+      }
+      playGames();
+    }
+  });
+}
+for (let i = 0; i < 2; i++) {
+  typedWords[i].addEventListener("keyup", function (a) {
+    if (a.keyCode == 13) {
+      endPlay();
+    }
+  });
+}
+console.log(keys.length)
+const effectson = (i) => {
+  keys[i].style.backgroundColor = "red";
+};
+
+for (let i = 0; i < 2; i++) {
+  typedWords[i].addEventListener("keypress", (a) => {
+    for (let j = 0; j < 128; j++) {
+      if (a.keyCode == j) {
+       console.log(j);
+        for (let k = 0; k < 36; k++) {
+          if (
+            "1234567890qwertyuiopasdfghjklzxcvbnm".charCodeAt(k) == j
+          ) {
+            
+            effectson(k);
+          }
+        }
+      }
+    }
+  });
+}
+const effectsoff = (i) => {
+  keys[i].style.backgroundColor = "white";
+};
+for (let i = 0; i < 2; i++) {
+  typedWords[i].addEventListener("keyup", (e) => {
+    // console.log(e.keyCode);
+    for (let j = 0; j < 128; j++) {
+      if (e.keyCode == j) {
+        console.log(j);
+        for (let k = 0; k < 36; k++) {
+
+          if (
+            "1234567890QWERTYUIOPASDFGHJKLZXCVBNM".charCodeAt(k) == j
+          ) {
+            effectsoff(k);
+          }
+        }
+      }
+    }
+  });
+}
+
+const changeMode = () => {
+  for (let i = 0; i < 2; i++) {
+    active[i].classList.remove("active");
+  }
+};
+const addmode = () => {
+  active[1].classList.add("active");
+};
+
+  </script> --}}
+  </body>
+</html>

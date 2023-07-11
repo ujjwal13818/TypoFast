@@ -1,0 +1,162 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    background-color: rgb(132, 132, 203);
+}
+#form{
+    width: 30vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    margin-top: 10vh;
+    margin-left: 35vw;
+    
+    border-radius: 10px;
+    border-color: green;
+    box-shadow: .3vw .3vw .5vw .7vw rgb(84, 84, 85);
+    background-image: linear-gradient(to bottom right, rgb(213, 136, 142), rgb(238, 235, 235));
+                
+}
+.success,.error{
+    position:absolute;
+    right: 1.6vw;
+    top: 21.5vh;
+}
+.success{
+    color: green;
+    visibility: hidden;
+}
+.error{
+    color: red;
+    visibility: hidden;
+}
+#see{
+    position: absolute;
+    margin-top: 3.9vh;
+    margin-left: 26vw;
+    cursor: pointer;
+    background-color: inherit;
+    border-color: inherit;
+    font-weight: bold;
+
+}
+.icon{
+    display: flex;
+    height: 12vh;
+    width: 12vh;
+    border-radius: 50%;
+    align-self: center;
+    justify-content: center;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    background-color: rgb(238, 236, 199);
+}
+.photo{
+    font-size: 3rem;
+    margin-top: 1.5vh;
+}
+.name{
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    color: black;
+    padding-top: 5vh;
+}
+.typofast{
+    font-style: italic;
+    font-weight: 700;
+    color: rgb(9, 9, 9);
+    background-color: black;
+    color: white;
+    transform: rotate(-10deg);
+    border-radius: 50%;
+}
+.f{
+    color: rgb(247, 0, 0);
+}
+.username , .username-error , .username-success{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: large;
+    margin-bottom: 2vh;
+}
+.password{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: larger;
+    margin-bottom: 2vh;
+}
+.captcha{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: larger;
+    margin-bottom: 2vh;
+}
+.username-error .error{
+    visibility: visible;
+    border-color: red;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: larger;
+}
+.username-success .success{
+    visibility: visible;
+    border-color: green;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: larger;
+}
+input{
+   display: flex;
+   justify-content: center;
+   margin-left: 1vw;
+     height: 4vh;
+    width: 28vw;
+    border: 1.6px solid rgb(0, 0, 0 , 0.3);
+    padding: 0vh .5vw;
+    background-image:linear-gradient(to right , rgb(226, 226, 230) , rgb(224, 233, 224));
+    font-size: 1rem;
+    color: rgb(0, 6, 6);
+}
+.btn_log{
+    background-color: rgb(140, 61, 230);
+    color: white;
+    border: 1px solid green;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    height: 4vh;
+    font-size: larger;
+    font-weight: 700;
+}
+.btn_log:hover{
+    cursor: pointer;
+    background-color: black;
+}
+.statement{
+    padding-top: 1vh;
+}
+.sign{
+    font-weight: bold;
+    cursor: pointer;
+}
+.forget{
+    font-size: large;
+    margin-top: 1vh;
+   margin-bottom: 3vh;
+   color: rgb(173, 18, 18);
+}

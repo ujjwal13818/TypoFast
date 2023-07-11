@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typofast</title>
+    <link rel="stylesheet" href="css/{{style}}" />
+    <link            
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="name">
+      <span class="typofast">Typo<span class="f">F</span>ast</span>
+    </div>
+    <div class="form_box">
+      <form action="/login" method="post" id="form">
+        <div class="icon" id="icon">
+          <div class="photo" id="photo">
+            <i class="fa-solid fa-user"></i>
+          </div>
+        </div>
+        <div class="username">
+          <label>Username</label>
+          <input
+            type="text"
+            name="name"
+            id="user"
+            placeholder="abc123@example.com"
+          /><span class="success"><i class="fa-solid fa-circle-check"></i></span
+          ><span class="error"
+            ><i class="fa-sharp fa-solid fa-circle-exclamation"></i
+          ></span>
+        </div>
+        <div class="password">   
+          <label for="password">Password</label>
+          <input type="password" name="password" id="pass" placeholder="password"/> 
+          <button id="see">see</button>
+        </div>
+        <div class="warning" id="warning"></div>
+        <button class="btn_log">Login</button>
+        <div class="statement">
+          Don't have an account?&nbsp <a href="/signup"><span class="sign">Sign up</span></a> 
+        </div>
+        <input type="submit">
+      </form>
+    </div>
+  </body>
+</html>

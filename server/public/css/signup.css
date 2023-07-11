@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+.title{
+    display: flex;     
+    justify-content: center;  
+    font-size: 3rem;    
+    color: black;
+    padding-top: 3vh;
+}
+.typofast{
+     margin-left: 1.6vw;
+    font-style: italic;
+    font-weight: 700;
+    color: rgb(9, 9, 9);
+    background-color: black;
+    color: white;
+    transform: rotate(-10deg);
+    border-radius: 50%;
+}
+.f{
+    color: rgb(247, 0, 0);
+}
+.icon{
+    font-weight: 900;
+    size: 6rem;
+    color: black;
+    
+}
+body{
+    background-image:linear-gradient(to bottom right , rgb(122, 73, 213) , rgb(160, 156, 230) ,rgb(220, 217, 244) );
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    font-size: 1rem;
+    padding-left: .3vw;
+    color: rgb(25, 5, 61);
+    margin-bottom: 4.8vh;
+}
+#name,#email,#pass,#cpass,#captcha,#number{
+    margin-top: .1vh;
+    font-size: 1rem;
+    height: 6vh;
+    border-bottom: 2px solid black;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    background-color: inherit;
+    color: black;
+    width: 70vw;
+    margin-left: .2vh;
+}
+::placeholder{
+    color: black;
+}
+.submit{
+    background-image: linear-gradient(to right, blue , green);
+    padding: 1vh,1vh,1vh,1vh;
+    color: black;
+    cursor: pointer;
+    width: 10vw;
+    margin-top: 2vh;
+    height: 5vh;
+    font-weight: bolder;
+}
+.submit:hover{
+    background-image:linear-gradient(to right , green , blue);
+}
+#cap{
+    background-size: contain;
+    padding: auto;
+    font-size: 2rem;
+    background-color: yellowgreen;
+    color: black;
+    position: absolute;
+    right: 40vw;
+    bottom: 10vh;
+}
+#refresh{
+    height: 4vh;
+    width: 1.5vw;
+    position: absolute;
+    right: 37.5vw;
+    bottom: 10vh;
+    cursor: pointer;
+}
+.login{
+    position: absolute;
+    right: 5vw;
+    top: 10vh;
+    font-size: larger;
+    color: blue;
+}
+.btnlog{
+    margin-left: .7vw;
+    background-size: contain;
+    background-color: blueviolet;
+    color: white;
+    font-size: larger;
+    padding: 0vh 2vh;
+    cursor: pointer;
+}

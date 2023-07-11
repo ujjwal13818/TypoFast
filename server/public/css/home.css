@@ -1,0 +1,130 @@
+*{
+    font-family: 'Baloo Bhai 2', cursive;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.scrl{
+    position: relative;
+    width: 100%;
+    height: 1rem;
+    margin-top: 0px;
+}
+.scrl h2{
+    width: 100%;
+    height: 100%;
+    font-family: unset;
+    line-height: 30px;
+    color: rgb(228 231 17 / 94%);
+    transform: translate(100%);
+    animation: scrl 15s linear infinite;
+}
+@keyframes scrl{
+    0% {
+        transform:translate(100%)
+    }
+    100%{
+        transform: translate(-100%)
+    }
+}
+
+
+body::before{
+    content: "";
+    position: absolute;
+    background : url('./keyboard.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 1.0;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+}
+.name{
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+    padding-top: 15vh;
+}
+.typofast{
+
+    font-style: italic;
+    font-weight: 700;
+    color: rgb(9, 9, 9);
+    background-color: black;
+    color: white;
+    transform: rotate(-10deg);
+    border-radius: 50%;
+}
+.f{
+    color: rgb(247, 0, 0);
+}
+.icon{
+    font-weight: 900;
+    size: 6rem;
+    color: black;
+    
+}
+.icon:hover{
+    cursor: pointer;
+}
+.btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   
+    margin-top: 25vh;
+}
+.btn1{
+    padding-left: 8vw;
+    padding-right: 8vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border-radius: 5%;
+    border-color: black;
+     font-size: larger;
+     background-color: rgb(32, 232, 139);
+}
+.btn1:hover{
+    background-color:black;
+    color: white;
+    border-radius: 0%;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.btn2{
+    padding-left: 8vw;
+padding-right: 8vw;
+padding-top: 1vh;
+padding-bottom: 1vh;
+border-radius: 5%;
+border-color: green;
+background-color: yellow;
+color: black;
+font-size: larger;
+margin-left: 5vh;
+}
+.btn2:hover{
+    background-color:rgb(3, 161, 247);
+    color: rgb(23, 6, 6);
+    border-radius: 0%;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+.guest{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-top: 2vh;
+}
+.guest a{
+    text-decoration: none;
+    color: white;
+}
+.guest:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+
+}
+::-webkit-scrollbar{display:none;}
