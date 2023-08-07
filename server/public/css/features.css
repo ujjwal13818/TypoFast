@@ -11,18 +11,18 @@ body {
 }
 a{
   text-decoration: none;
-  color: yellow;
+  /* color: yellow; */
 }
 .mode {
-  position: absolute;
-  right: 3vw;
+  /* position: absolute; */
+  /* right: 3vw; */
   font-size: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  top: 1vh;
+  /* top: 1vh; */
   z-index: 2;
 }
 .switch {
@@ -131,4 +131,24 @@ a{
   font-size: larger;
   font-weight: bold;
   text-transform: capitalize;
+}
+.right-corner{
+  display: flex;
+  flex-direction: row;
+  width: 10vw;
+  margin-top: 2vh;
+  justify-content: space-around;
+  float: right;
+  margin-right: 1vw;
+}
+.logout , .logout a{
+  font-size: 1.2rem;
+  /* color: white; */
+  font-weight: bold;
+}
+a:hover{
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
 }

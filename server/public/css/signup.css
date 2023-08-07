@@ -1,4 +1,4 @@
-*{
+/* *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -108,4 +108,126 @@ body{
     font-size: larger;
     padding: 0vh 2vh;
     cursor: pointer;
+} */
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #3498db, #2c3e50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  .signup-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 40px;
+    width: 300px;
+  }
+  
+  .signup-container h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #777;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .signup-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup-btn:hover {
+    background-color: #0056b3;
+  }
+  .captcha {
+    width: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .captcha-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+  }
+  .submit-btn {
+    background-color: dodgerblue;
+    color: rgb(6, 5, 5);
+    border: none;
+    border-radius: 20px;
+    padding: 9px 60px; /* Enlarged horizontal padding for the button */
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .submit-btn:hover {
+    background-color: rgb(12, 44, 208);
+  }
+  
+  .title{
+    display: flex;     
+    justify-content: center;  
+    font-size: 3rem;    
+    color: black;
+    padding-bottom: 8vh;
+}
+.typofast{
+     margin-left: 1.6vw;
+    font-style: italic;
+    font-weight: 700;
+    color: rgb(9, 9, 9);
+    background-color: black;
+    color: white;
+    transform: rotate(-10deg);
+    border-radius: 50%;
+}
+.f{
+    color: rgb(247, 0, 0);
+}
+#captcha{
+  width: 9vw;
+  height: 3.5vh;
 }

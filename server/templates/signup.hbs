@@ -1,84 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Typofast</title>
-    <link rel="stylesheet" href="sign.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&family=Josefin+Sans:wght@300&family=Ubuntu&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
-  <body>
-    <div class="title">
-        Sign Up to<span></span> <span 
-        class="typofast">Typo<span class="f">F</span>ast</span><span class="icon">&nbsp;&nbsp;<i><span><span>
-</div><!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign up</title>
-    <link rel="stylesheet" href="css/{{style}}" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&family=Josefin+Sans:wght@300&family=Ubuntu&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
-  <body>
+<html>
+<head>
+ <link rel="stylesheet" href="css/{{style}}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
     <div class="title">
         Sign Up to<span></span> <span 
         class="typofast">Typo<span class="f">F</span>ast</span><span class="icon">&nbsp;&nbsp;<i><span><span>
 </div>
-<div class="signform">
+<div class="signup-container">
     <form action="/signup" method="post">
-    <div class="name"> 
-        <label>Name*</label> 
-        <input type="text" name="name" id="name" placeholder="Write your full name">
+    <h1>Sign Up</h1>
+    <div class="input-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name">
     </div>
-    <div class="login">
-        Already have an account? <a href="/login"><button class="btnlog">login</button></a>
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input type="password" id="pass" name="password" placeholder="Make your password">
     </div>
-    {{!-- <div class="name">
-        <label>E-mail*</label>
-        <input type="email" id="email" placeholder="E-mail">
-    </div><div class="name">
-        <label>Phone*</label>
-        <input type="number" id="number" placeholder="phone number">
-    </div> --}}
-    <div class="name">
-        <label>Password*</label>
-        <input type="password" name="password" id="pass" placeholder="Enter your password">
+    <div class="captcha-container">
+        
+        <div class="captcha">
+          <div id="cap" style="user-select: none;"></div>
+           <div id="refresh" onclick="generate()" style="float: right;"><i class="fa-solid fa-arrows-rotate"></i></div>
+        </div>
+        <input type="text" id="captcha" name="captcha" placeholder="Enter CAPTCHA" required autocomplete="off">
     </div>
-    {{!-- <div class="name">
-        <label>confirm password*</label>
-        <input type="password" id="cpass" placeholder="">
-    </div> --}}
-    {{!-- <div class="name">
-        <label>Enter captcha*</label>
-        <input type="text" id="captcha" placeholder="Enter captcha">
-        <div id="cap" selectable="false"></div>
-        <div id="refresh" onclick="generate()"><i class="fa-solid fa-arrows-rotate"></i></div>
-        <button class="submit" id="submit" onclick="valid()">
-            Submit
-        </button>
-       
-    </div> --}}
-
-           <input type="submit">   
-    </form>
+      <button type="submit" class="submit-btn" id="submit" onclick="valid()">Login</button>
+  </form>
 </div>
-  {{!-- <script>
-    const btn = document.getElementById("submit");
+      <script>
+         const btn = document.getElementById("submit");
     const body = document.querySelector("body");
     const ref = document.getElementById("refresh");
     body.addEventListener(onload,generate());
@@ -86,7 +40,7 @@
         const cap = document.getElementById("cap");
         var temp = "";
         var random = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789kugkg"
-        for(let i = 0 ; i < 6 ; i++){
+        for(let i = 0 ; i < 5 ; i++){
             temp += random.charAt(Math.random()*random.length);
         }
         cap.innerText = temp;   
@@ -99,66 +53,12 @@
         else {
             alert("Enter correct captcha");
             val.value = "";
+            location.reload();
     }
 }
-  </script> --}}
-  </body>
+   </script>
+  
+</body>
 </html>
 
-{{!-- <div class="signform">
-    <div class="name">
-        <label>Name*</label>
-        <input type="text" id="name" placeholder="Write your full name">
-    </div>
-    <div class="login">
-        Already have an account? <a href="form.html"><button class="btnlog">login</button></a>
-    </div>
-    <div class="name">
-        <label>E-mail*</label>
-        <input type="email" id="email" placeholder="E-mail">
-    </div><div class="name">
-        <label>Phone*</label>
-        <input type="number" id="number" placeholder="phone number">
-    </div><div class="name">
-        <label>Password*</label>
-        <input type="password" id="pass" placeholder="Enter your password">
-    </div><div class="name">
-        <label>confirm password*</label>
-        <input type="password" id="cpass" placeholder="">
-    </div><div class="name">
-        <label>Enter captcha*</label>
-        <input type="text" id="captcha" placeholder="Enter captcha">
-        <div id="cap" selectable="false"></div>
-        <div id="refresh" onclick="generate()"><i class="fa-solid fa-arrows-rotate"></i></div>
-        <button class="submit" id="submit" onclick="valid()">
-            Submit
-        </button>
-    </div>
-</div>
-  <script>
-    const btn = document.getElementById("submit");
-    const body = document.querySelector("body");
-    const ref = document.getElementById("refresh");
-    body.addEventListener(onload,generate());
-    function generate(){
-        const cap = document.getElementById("cap");
-        var temp = "";
-        var random = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789kugkg"
-        for(let i = 0 ; i < 6 ; i++){
-            temp += random.charAt(Math.random()*random.length);
-        }
-        cap.innerText = temp;   
-    }
-   function valid(){  
-        const val = document.getElementById("captcha");
-        if(val.value === cap.innerText){
-            console.log(cap.innerText)
-        }
-        else {
-            alert("Enter correct captcha");
-            val.value = "";
-    }
-}
-  </script>
-  </body>
-</html> --}}
+

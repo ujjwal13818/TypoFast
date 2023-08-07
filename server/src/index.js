@@ -61,9 +61,12 @@ app.post("/login" , async(req , res) =>{
             if(existing === password){
                 res.redirect("features");
             }
+            else{
+                res.status(401).send('Wrong password !!!');
+            }
         }
         else{
-            res.send("wrong password");
+            res.status(401).send('Wrong username');
         }
        })
     } catch (error) {

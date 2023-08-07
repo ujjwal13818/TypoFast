@@ -15,9 +15,14 @@
     <link rel="stylesheet" href="css/{{style}}" />
   </head>
   <body>
+    <div class="right-corner">
     <div class="mode" id="mode" onclick="toggle()">
       <i class="fa-solid fa-circle-half-stroke"></i>
       <p class="switch" id="switch" onclick="toggle()">switch mode</p>
+    </div>
+    <div class="logout">
+      <a href="http://localhost:2500" class="link">Logout</a>
+    </div>
     </div>
     <div class="containers">
       <div class="left_container">
@@ -36,7 +41,7 @@
       <div id="right_container">
         <div class="rightL">
            <div class="right">
-            <a href="http://localhost:3001">Beginner's Level</a>
+            <a href="http://localhost:3001" class="link">Beginner's Level</a>
            </div>
            <div class="rightd">
             Extreme Level
@@ -48,7 +53,7 @@
                 Intermediate Level
             </div>
             <div class="rightd" style="color: rgb(212, 42, 70);">
-                <a href="http://localhost:3004">Special for coders.</a>
+                <a href="http://localhost:3004" class="link">Special for coders.</a>
             </div>
         </div>
       </div>
@@ -56,8 +61,10 @@
     <script>
     function toggle() {
     const font = document.getElementById("right_container");
+    
     const mode = document.getElementById("mode");
     const sw = document.getElementById("switch");
+    const links = document.getElementsByClassName("link");
     const typofast = document.getElementById("typofast");
   if (document.body.style.backgroundColor === "white") {
     document.body.style.backgroundColor = "Black";
@@ -65,15 +72,16 @@
     mode.style.color = "white";
     sw.style.color = "white";
     font.style.color = "Yellow";
+    
   } else {
     document.body.style.backgroundColor = "white";
-    
     document.body.style.color = "Black";
     mode.style.color = "black";
     sw.style.color = "black";
-    font.style.color = "green";
+    document.body.style.color = "green";
+    links.style.color = "green";
   }
-}
+   }
     </script>
   </body>
 </html>

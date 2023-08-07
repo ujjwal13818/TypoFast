@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />  
@@ -51,4 +51,93 @@
       </form>
     </div>
   </body>
+</html> --}}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<link rel="stylesheet" href="css/{{style}}" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   <div class="title">
+        Log in to<span></span> <span 
+        class="typofast">Typo<span class="f">F</span>ast</span><span class="icon">&nbsp;&nbsp;<i><span><span>
+</div>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form action="/login" method="post">
+      <div class="input-group">
+        <label for="username">Username:</label>
+        <input type="text" id="user" name="name" required  placeholder="abc123@example.com">
+      </div>
+      <div class="input-group">
+        <label for="password">Password:</label>
+        <input type="password" id="pass" name="password" required>
+        <span class="password-toggle" onclick="togglePassword()">Show</span>
+      </div>
+      <div class="captcha-container">
+        
+        <div class="captcha">
+          <div id="cap" style="user-select: none;"></div>
+           <div id="refresh" onclick="generate()" style="float: right;"><i class="fa-solid fa-arrows-rotate"></i></div>
+        </div>
+        <input type="text" id="captcha" name="captcha" placeholder="Enter CAPTCHA" required autocomplete="off">
+      </div>
+      <div class="statement">
+        Don't have an account?&nbsp <a href="/signup"><span class="sign">Sign up</span></a> 
+      </div>
+      <button type="submit" class="submit-btn" id="submit" onclick="valid()">Login</button>
+    </form>
+  </div>
+
+  <script>
+    function togglePassword() {
+  var passwordInput = document.getElementById("pass");
+  var passwordToggle = document.querySelector(".password-toggle");
+  
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    passwordToggle.textContent = "Hide";
+  } else {
+    passwordInput.type = "password";
+    passwordToggle.textContent = "Show";
+  }
+}
+
+  //captcha authentication
+
+   const btn = document.getElementById("submit");
+    const body = document.querySelector("body");
+    const ref = document.getElementById("refresh");
+    body.addEventListener(onload,generate());
+    function generate(){
+        const cap = document.getElementById("cap");
+        var temp = "";
+        var random = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789kugkg"
+        for(let i = 0 ; i < 5 ; i++){
+            temp += random.charAt(Math.random()*random.length);
+        }
+        cap.innerText = temp;   
+    }
+   function valid(){  
+        const val = document.getElementById("captcha");
+        if(val.value === cap.innerText){
+            console.log(cap.innerText)
+        }
+        else {
+            alert("Enter correct captcha");
+            val.value = "";
+            location.reload();
+    }
+}
+  </script>
+</body>
 </html>
+

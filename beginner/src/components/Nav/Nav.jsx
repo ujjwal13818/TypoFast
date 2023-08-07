@@ -11,9 +11,7 @@ const Nav = () => {
               </p>
             </div>
               <div className="nav-right">
-                <a 
-                target="_blank"
-                rel="noreferrer"
+                <a
                 className="nav-linkedin-link"
                 href="http://localhost:2500/features">Go Back</a>
             </div>
