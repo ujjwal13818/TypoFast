@@ -15,7 +15,8 @@
     "babel": "^6.23.0"
   },
   "scripts": {
-    "start": "nodemon src/index.js"
+    "start": "nodemon src/index.js",
+    "dev": "npm start"
   },
   "repository": {
   },
