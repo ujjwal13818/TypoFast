@@ -20,9 +20,10 @@
       <i class="fa-solid fa-circle-half-stroke"></i>
       <p class="switch" id="switch" onclick="toggle()">switch mode</p>
     </div>
+   
+  </div>
     <div class="logout">
-      <a href="http://localhost:2500" class="link">Logout</a>
-    </div>
+      <a href="http://localhost:2500">Logout</a>
     </div>
     <div class="containers">
       <div class="left_container">
@@ -30,30 +31,44 @@
         <h1>About &nbsp;<span id="typofast">Typo<span 
             class="f">F</span>ast</span><span class="icon">&nbsp;&nbsp;
             <i class="fa-regular fa-keyboard"></i></span></span></h1>
-      </div >
+      </div>
       <div class="content">
 
+    <div class="section1">
+            TypoFast: Elevate Your Typing Speed Skills
+    </div>
      
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam provident molestias vitae atque aperiam aliquam adipisci, asperiores culpa nulla odio porro amet hic minima officiis repudiandae? Harum amet optio, sapiente repudiandae reiciendis, deleniti corrupti illo dolore atque perspiciatis quis voluptate. Non neque amet provident quod.
+<div class="section2">
+Welcome to TypoFast, your go-to destination for enhancing your typing speed and accuracy. Our innovative platform is designed to help users of all skill levels master the art of typing with precision and swiftness. Whether you're a beginner aiming to improve your typing proficiency or an advanced typist looking to refine your skills further, TypoFast has something for everyone.
+</div>
+
+<div class="section3">
+At TypoFast, we understand the importance of efficient typing in today's fast-paced digital world. From workplace productivity to academic excellence, typing speed plays a pivotal role in various spheres of life. Our comprehensive suite of engaging exercises, interactive challenges, and tailored lessons will guide you through a progressive journey towards becoming a typing maestro.
+
+<div class="section4">
+  Note:- Intermediate and Expert levels are not active currently.
+</div>
+</div>
+
 
     </div>
     </div>
       <div id="right_container">
         <div class="rightL">
            <div class="right">
-            <a href="http://localhost:3001" class="link">Beginner's Level</a>
+            <a href="https://ujjwal13818.github.io/reacttypofast1/">Beginner's Level</a>
            </div>
            <div class="rightd">
-            Extreme Level
+            <a href="#"></a> Extreme Level
            </div>
         </div>
 
         <div class="rightR">
             <div class="right">
-                Intermediate Level
+                <a href="#"></a> Intermediate Level
             </div>
             <div class="rightd" style="color: rgb(212, 42, 70);">
-                <a href="http://localhost:3004" class="link">Special for coders.</a>
+                <a href="https://ujjwal13818.github.io/reacttypofast/" >Special for coders.</a>
             </div>
         </div>
       </div>
@@ -61,27 +76,23 @@
     <script>
     function toggle() {
     const font = document.getElementById("right_container");
-    
     const mode = document.getElementById("mode");
     const sw = document.getElementById("switch");
-    const links = document.getElementsByClassName("link");
     const typofast = document.getElementById("typofast");
   if (document.body.style.backgroundColor === "white") {
     document.body.style.backgroundColor = "Black";
-    document.body.style.color = "white";
+    document.body.style.color = "rgb(227, 224, 224)";
     mode.style.color = "white";
     sw.style.color = "white";
-    font.style.color = "Yellow";
-    
+   
   } else {
     document.body.style.backgroundColor = "white";
     document.body.style.color = "Black";
     mode.style.color = "black";
     sw.style.color = "black";
     document.body.style.color = "green";
-    links.style.color = "green";
-  }
    }
+    }
     </script>
   </body>
 </html>
